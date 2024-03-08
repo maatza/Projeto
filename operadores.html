@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Bebidas</title>
+</head>
+
+<body>
+    <h1>Menu de Bebidas</h1>
+
+    <div id="bebida">
+        <h2>Bebidas Alcoólicas</h2>
+        <ul id="listaBebidasAlcoolicas">
+            <li>Cerveja</li>
+            <li>Vinho</li>
+            <li>Whisky</li>
+        </ul>
+    </div>
+
+    <div id="idade">
+        <label for="idadeCliente">Informe sua idade:</label>
+        <input type="number" id="idadeCliente">
+        <button onclick="verificarIdade()">Verificar</button>
+    </div>
+
+    <script>
+        function verificarIdade() {
+            const idade = document.getElementById('idadeCliente').value;
+            const bebidasAlcoolicas = document.getElementById('listaBebidasAlcoolicas');
+
+
+            idade >= 18 ? bebidasAlcoolicas.style.display = 'block' : bebidasAlcoolicas.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
